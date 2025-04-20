@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>E-commerce Customer Service Agent</title>
+    <link rel="stylesheet" href="/static/styles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="chat-container">
+            <div class="chat-header">
+                <h1>Customer Service Agent</h1>
+            </div>
+            <div class="chat-messages" id="chatMessages">
+                <div class="message agent">
+                    <div class="message-content">
+                        Hello! I'm your e-commerce customer service agent. How can I help you today?
+                    </div>
+                </div>
+            </div>
+            <div class="quick-actions">
+                <button onclick="suggestAction('product')">Browse Products</button>
+                <button onclick="suggestAction('order')">Check Order</button>
+                <button onclick="suggestAction('cancel')">Cancel Order</button>
+                <button onclick="suggestAction('place')">Place Order</button>
+            </div>
+            <div class="chat-input">
+                <input type="text" id="userInput" placeholder="Type your message here...">
+                <button onclick="sendMessage()">Send</button>
+            </div>
+        </div>
+        <div class="debug-panel">
+            <h3>Agent Debug Info</h3>
+            <div class="debug-content" id="debugInfo">
+                <div class="debug-section">
+                    <h4>Database Query</h4>
+                    <pre id="dbQuery"></pre>
+                </div>
+                <div class="debug-section">
+                    <h4>Agent Processing</h4>
+                    <pre id="agentProcessing"></pre>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="/static/script.js"></script>
+</body>
+</html> 
